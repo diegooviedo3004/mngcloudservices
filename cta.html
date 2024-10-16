@@ -167,28 +167,23 @@
             <span class="close" id="closeBtn">&times;</span>
             <h2>Contact Us</h2>
             <form 
-	action="https://gdsht.app/s/a755be6d593046a58627af739dd4b4a8" 
-	method="POST" 
-> 
-	<label name="Name">Name</label> 
-	<input type="text" name="Name" placeholder="Name"/>
+                action="https://gdsht.app/s/a755be6d593046a58627af739dd4b4a8" 
+                method="POST" 
+            > 
+                <input type="text" name="Name" placeholder="Name"/>
+                <input type="email" name="Email" placeholder="Email"/>
+                <input type="text" name="Message" placeholder="Message"/>
+            
+                <!-- override the redirect URL -->
+                <input type="hidden" name="_gs_override_redirect_url"
+                value="https://www.goodsheet.io/s/thank-you"/>
 
-	<label name="Email">Email</label> 
-	<input type="text" name="Email" placeholder="Email"/>
-
-	<label name="Message">Message</label> 
-	<input type="text" name="Message" placeholder="Message"/>
- 
-	<!-- override the redirect URL -->
-	<input type="hidden" name="_gs_override_redirect_url"
-	value="https://www.goodsheet.io/s/thank-you"/>
-
-	<!-- catch spam with a honeypot -->
-	<input type="hidden" name="_gs_honeypot"
-	style="display: none !important">
-			 
-	<input type="submit" value="Submit" /> 
-</form>
+                <!-- catch spam with a honeypot -->
+                <input type="hidden" name="_gs_honeypot"
+                style="display: none !important">
+                        
+                <input type="submit" value="Submit" /> 
+            </form>
         </div>
     </div>
 

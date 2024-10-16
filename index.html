@@ -7,7 +7,7 @@
 		<meta name="generator" content="Astro v1.1.5">
 		<meta name="description" content="Template built with tailwindcss using Tailus blocks v2">
 		<title>MNG Cloud Services</title>
-
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 		<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/index.350e2433.css" /></head>
 	<body class="bg-white dark:bg-gray-900 astro-FLTEP2YP">
@@ -70,7 +70,7 @@
 
                     <div class="mt-12 lg:mt-0 astro-UY3JLCBK">
                         <a href="#" class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max astro-UY3JLCBK">
-                            <span class="relative text-sm font-semibold text-white astro-UY3JLCBK">Get Started</span>
+                            <span class="relative text-sm font-semibold text-white astro-UY3JLCBK" data-micromodal-trigger="modal-1" aria-controls="modal-1">Get Started</span>
                         </a>
                     </div>
                 </div>
@@ -533,5 +533,31 @@
         </div>
       </div>
 </div>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <header class="modal__header">
+        <h2 class="modal__title" id="modal-1-title">
+          Simple Modal
+        </h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+      </header>
+      <main class="modal__content" id="modal-1-content">
+        <p>
+          This is a simple modal created using Micromodal.js.
+        </p>
+      </main>
+      <footer class="modal__footer">
+        <button class="modal__btn" data-micromodal-close>Close</button>
+        <button class="modal__btn modal__btn-primary">Confirm</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<script>
+  MicroModal.init();
+</script>
 </footer>
 	</body></html>

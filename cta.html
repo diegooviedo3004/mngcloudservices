@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,61 +6,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Favicon link -->
 
-    <title>MNG Cloud Solutions</title>
+    <title>MNG Cloud - LWC Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<style>
-body {
+    <style>
+        body {
             font-family: 'Inter', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #ffffff !important;
+            background-color: #ffffff; /* White background */
             color: #333;
             text-align: center;
 
         }
-</style>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+        }
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .advantages {
+            list-style-type: none;
+            padding: 0;
+            text-align: left; /* Align text to the left */
+            margin: 0 auto; /* Center the list */
+            max-width: 400px; /* Limit the width of the list */
+        }
+        .advantages li {
+            margin: 10px 0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+        .check {
+            color: #28a745; /* Green color */
+            margin-right: 10px;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto; /* Center modal */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Set to a percentage for better responsiveness */
+            max-width: 400px; /* Limit the width of the modal */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+            position: absolute; /* Position absolutely for centering */
+            top: 50%; /* 50% from the top */
+            left: 50%; /* 50% from the left */
+            transform: translate(-50%, -50%); /* Center the modal */
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        /* Form Styles */
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 20px); /* Full width minus padding */
+            margin-bottom: 15px; /* Space below inputs */
+            padding: 10px; /* Inner padding for inputs */
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Full width for button */
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .cta-button {
+                padding: 12px 20px;
+                font-size: 0.9em;
+            }
+            .modal-content {
+                margin: 5% auto; /* Adjust margin to center modal */
+                width: 90%; /* Full width on mobile */
+                max-height: 80%; /* Limit the height to avoid overflow */
+                overflow-y: auto; /* Enable scroll if content is too tall */
+            }
 
-    <div class="text-center">
-        <img src="logo.png" alt="MNG Cloud Logo" class="mb-5">
-        <h1 class="text-4xl font-bold text-blue-600 mb-4">Welcome to MNG Cloud</h1>
-        <p class="text-lg text-gray-700 mb-6">We offer intuitive and effective solutions in LWC for Salesforce.</p>
+            body {
+                margin-left: 3rem;
+                margin-right: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
 
-        <ul class="list-none text-left mx-auto max-w-md">
-            <li class="flex items-center text-lg text-gray-600 mb-2">
-                <span class="text-green-500 mr-2">✔️</span> Intuitive interface
-            </li>
-            <li class="flex items-center text-lg text-gray-600 mb-2">
-                <span class="text-green-500 mr-2">✔️</span> Smooth integration with Salesforce
-            </li>
-            <li class="flex items-center text-lg text-gray-600 mb-2">
-                <span class="text-green-500 mr-2">✔️</span> Use of Lightning Design System (LDS)
-            </li>
-            <li class="flex items-center text-lg text-gray-600 mb-2">
-                <span class="text-green-500 mr-2">✔️</span> Personalized support
-            </li>
-            <li class="flex items-center text-lg text-gray-600 mb-2">
-                <span class="text-green-500 mr-2">✔️</span> Measurable and effective results
-            </li>
-        </ul>
-
-        <button id="modalBtn" class="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded shadow transition duration-300">Contact Us Now</button>
+    <div>
+        <img src="logo.png" alt="MNG Cloud Logo" style="margin-bottom: 5px;">
+        <h1>Welcome to MNG Cloud</h1>
+        <p>We offer intuitive and effective solutions in LWC for Salesforce.</p>
+        <ul class="advantages">
+            <li><span class="check">✔️</span>Intuitive interface</li>
+            <li><span class="check">✔️</span>Smooth integration with Salesforce</li>
+            <li><span class="check">✔️</span>Use of Lightning Design System (LDS)</li>
+            <li><span class="check">✔️</span>Personalized support</li>
+            <li><span class="check">✔️</span>Measurable and effective results</li>
+        </ul><br><br>
+        <button class="cta-button" id="modalBtn">Contact Us Now</button>
     </div>
 
     <!-- The Modal -->
-    <div id="myModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div class="bg-white rounded-lg shadow-lg p-8 max-w-sm w-full mx-auto">
-            <span id="closeBtn" class="text-gray-500 text-2xl cursor-pointer float-right">&times;</span>
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Us</h2>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeBtn">&times;</span>
+            <h2>Contact Us</h2>
             <form action="" method="POST" netlify>
-                <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded mb-4 focus:ring focus:ring-blue-500">
-                <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded mb-4 focus:ring focus:ring-blue-500">
-                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded transition duration-300">Send</button>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit">Send</button>
             </form>
         </div>
     </div>
@@ -74,20 +184,20 @@ body {
         // Get the <span> element that closes the modal
         var span = document.getElementById("closeBtn");
 
-        // When the user clicks the button, open the modal
+        // When the user clicks the button, open the modal 
         btn.onclick = function() {
-            modal.classList.remove("hidden");
+            modal.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
-            modal.classList.add("hidden");
+            modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
             if (event.target == modal) {
-                modal.classList.add("hidden");
+                modal.style.display = "none";
             }
         }
     </script>

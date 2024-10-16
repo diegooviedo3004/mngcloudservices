@@ -170,10 +170,11 @@
                 action="https://gdsht.app/s/a755be6d593046a58627af739dd4b4a8" 
                 method="POST" 
             > 
-                <input type="text" name="Name" placeholder="Name"/>
-                <input type="email" name="Email" placeholder="Email"/>
-                <input type="text" name="Message" placeholder="Message"/>
-            
+
+                <input type="text" name="Name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded mb-4 focus:ring focus:ring-blue-500">
+                <input type="email" name="Email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded mb-4 focus:ring focus:ring-blue-500">
+                <input type="text" name="Message" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded mb-4 focus:ring focus:ring-blue-500">
+
                 <!-- override the redirect URL -->
                 <input type="hidden" name="_gs_override_redirect_url"
                 value="https://www.goodsheet.io/s/thank-you"/>
@@ -182,7 +183,7 @@
                 <input type="hidden" name="_gs_honeypot"
                 style="display: none !important">
                         
-                <input type="submit" value="Submit" /> 
+                <input type="submit" value="Submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded transition duration-300"/> 
             </form>
         </div>
     </div>
